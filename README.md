@@ -96,30 +96,6 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 ---
 
-## Project Structure
-
-```
-.
-├── app.py                  # Main Flask application file (routes, logic, db models)
-├── templates/
-│   ├── base.html           # Base template with navbar and layout
-│   ├── index.html          # Dashboard to display all expenses
-│   ├── add_expense.html    # Form to add a new expense
-│   ├── edit_expense.html   # Form to edit an existing expense
-│   ├── categories.html     # Page to manage categories
-│   ├── login.html          # User login page
-│   ├── register.html       # User registration page
-│   └── profile.html        # User profile page for currency settings
-├── static/
-│   ├── favicon-16x16.png   # Favicon files
-│   ├── favicon-32x32.png
-│   └── favicon-96x96.png
-├── expenses.db             # SQLite database file (created on run)
-└── README.md               # This file
-```
-
----
-
 ## Future Enhancements
 
 -   **Data Visualization**: Implement charts and graphs (e.g., using Chart.js) to visualize spending by category or over time.
