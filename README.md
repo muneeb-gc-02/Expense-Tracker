@@ -120,7 +120,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 ---
 
-## 💡 Future Enhancements
+## Future Enhancements
 
 -   **Data Visualization**: Implement charts and graphs (e.g., using Chart.js) to visualize spending by category or over time.
 -   **Advanced Reporting**: Add filtering options to the dashboard and PDF export (e.g., by date range, by category).
