@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Manage Categories</h2>
+    <form method="POST">
+        <div class="mb-3">
+            <label for="name" class="form-label">Category Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Category</button>
+    </form>
+    {% if categories %}
+        <div class="table-responsive mt-4">
+            <table class="table table-striped">
+                <caption class="visually-hidden">List of categories</caption>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for category in categories %}
+                        <tr>
+                            <td>{{ category.name }}</td>
+                            <td>
+                                <a href="{{ url_for('delete_category', id=category.id) }}" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <p class="text-muted">No categories added yet.</p>
+    {% endif %}
+{% endblock %}

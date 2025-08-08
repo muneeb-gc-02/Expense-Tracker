@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Profile</h2>
+    <form method="POST">
+        <div class="mb-3">
+            <label for="currency" class="form-label">Currency</label>
+            <select class="form-select" id="currency" name="currency" required>
+                <option value="PKR" {% if user.currency == 'PKR' %}selected{% endif %}>Pakistani Rupee</option>
+                <option value="USD" {% if user.currency == 'USD' %}selected{% endif %}>US Dollar</option>
+                <option value="EUR" {% if user.currency == 'EUR' %}selected{% endif %}>Euro</option>
+                <option value="GBP" {% if user.currency == 'GBP' %}selected{% endif %}>British Pound</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Update Profile</button>
+    </form>
+{% endblock %}
